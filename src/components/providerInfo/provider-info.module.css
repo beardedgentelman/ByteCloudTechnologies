@@ -1,0 +1,26 @@
+.provider_info__container {
+  width: 10em;
+  height: 8em;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+img {
+  width: 20px;
+}
+
+@media screen and (max-width: 960px) {
+  .provider_info__container {
+    width: 8em;
+    height: 5em;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .provider_info__container {
+    width: 6em;
+  }
+}
