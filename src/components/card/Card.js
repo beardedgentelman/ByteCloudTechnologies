@@ -115,7 +115,7 @@ const Card = () => {
 
   return (
     <section className={style.card}>
-      <div className={style.scales}>
+      <output form='price_calc' className={style.scales}>
         <div className={style.providers_info}>
           <ProviderInfo name='backblaze' provIcon={backblazeIcon} />
           <ProviderInfo name='bunny' provIcon={bunnyIcon}>
@@ -150,7 +150,7 @@ const Card = () => {
           <BarColumn name='scaleway' result={getScalewayTotalCost().toFixed(2)} width={totalCost === 0 ? 0 : (getScalewayTotalCost() / totalCost) * 100} background={lowestProvider === "scaleway" ? "	#660099" : "#7d7d7d"} />
           <BarColumn name='vultr' result={getVultrTotalCost().toFixed(2)} width={totalCost === 0 ? 0 : (getVultrTotalCost() / totalCost) * 100} background={lowestProvider === "vultr" ? "	#00bcff" : "#7d7d7d"} />
         </div>
-      </div>
+      </output>
       <Form formName='price_calc' storage={storage} transfer={transfer} onChangeStorage={(e) => setStorage(e.target.value)} onChangeTransfer={(e) => setTransfer(e.target.value)} />
     </section>
   );
